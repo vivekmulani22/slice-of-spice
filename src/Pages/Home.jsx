@@ -6,38 +6,38 @@ import BestFor from "../Home/BestFor";
 import Serv from "../Home/Serv";
 import Sawipar from "../Home/sawipar";
 import Footer from "../Componet/Footer";
-import { assets } from "../assets/assets";
+import { Link } from "react-router-dom";
 import Footerlink from "../Componet/Footerlink";
 
 function Home() {
   return (
     <div
-      className=" h-screen w-full  bg-no-repeat bg-cover bg-center"
+      className="min-h-screen w-full bg-no-repeat bg-cover bg-center"
       style={{ backgroundImage: 'url("/src/assets/backgrounde1.png")' }}
     >
       <Navbar />
-      <div className="px-11 ">
-        <p className=" mt-[3vw] text-5xl font-bold text-white">
-          YES WE HAVE <br /> <span className="text-[#cc9933] ">BEST TASTE</span>
-          FOR <br /> YOU!
+      <div className="px-11">
+        <h1 className="mt-[3vw] text-5xl font-bold text-white">
+          YES WE HAVE <br /> 
+          <span className="text-[#cc9933]">BEST TASTE</span> FOR <br /> YOU!
+        </h1>
+        <p className="text-white mt-6">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
+          Etiam eu turpis molestie, dictum est a, mattis tellus. Sed <br />
+          dignissim, metus nec fringilla accumsan, risus sem <br />
+          sollicitudin lacus, ut interdum tellus elit sed risus.
         </p>
-        <br />
-        <p className="text-white">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Etiam
-          eu turpis molestie, dictum est a, mattis tellus. Sed <br /> dignissim,
-          metus nec fringilla accumsan, risus sem <br /> sollicitudin lacus, ut
-          interdum tellus elit sed risus.
-        </p>
-        <br />
-        <button className="w-[10vw] h-8 items-center bg-[#cc9933] ">
-          See Our Menu
-        </button>
-        <br />
+        <Link to="/Menu">
+          <button className="w-[10vw] h-8 mt-6 bg-[#cc9933] hover:bg-[#b88a2e] text-white transition-colors">
+            See Our Menu
+          </button>
+        </Link>
       </div>
+
       <div className="flex items-center justify-center">
         <Aboutus />
       </div>
-      <div className="flex items-center py-5 ">
+      <div className="flex items-center py-5">
         <Delivery />
       </div>
       <div className="flex items-center">
@@ -51,33 +51,31 @@ function Home() {
       </div>
 
       <div
-        className="flex items-center text-center w-full justify-center bg-no-repeat bg-cover bg-center py-10 "
+        className="flex items-center text-center w-full justify-center bg-no-repeat bg-cover bg-center py-10"
         style={{ backgroundImage: 'url("/src/assets/footerimg.png")' }}
       >
-        <div className="">
-          <br />
-          <h1 className="text-[1.6vw] text-white">
+        <div>
+          <h2 className="text-[1.6vw] text-white">
             Sign up with your name and email to get fresh updates.
-          </h1>
-          <br />
-          <div className="flex justify-center">
+          </h2>
+          <div className="flex justify-center mt-6">
             <input
               type="email"
-              name=""
               placeholder="Email Address"
-              className="w-[30vw] h-10 px-4"
+              className="w-[30vw] h-10 px-4 focus:outline-none focus:ring-2 focus:ring-[#cc9933]"
             />
-            <button className="w-[10vw] h-10 items-center  bg-[#cc9933] ">
+            <button className="w-[10vw] h-10 bg-[#cc9933] hover:bg-[#b88a2e] text-white transition-colors">
               Subscribe
             </button>
           </div>
         </div>
       </div>
+
       <footer className="flex px-[5vw] bg-black py-10">
         <Footer />
       </footer>
       <div>
-        <Footerlink/>
+        <Footerlink />
       </div>
     </div>
   );
